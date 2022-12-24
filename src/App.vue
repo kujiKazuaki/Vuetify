@@ -1,17 +1,27 @@
 <template>
   <div class="app">
-    <section class="header">
+    <div class="header">
       <Header />
-    </section>
+    </div>
+    <div class="contents">
+      <router-view />
+    </div>
   </div>
 </template>
 
 <script>
-import Header from "@/views/install.vue";
+import Header from "@/components/HeaderLink.vue"
 
 export default {
   components: {
     Header,
   },
-};
+}
 </script>
+
+<style scoped>
+.app {
+  margin: 0px;
+  padding: 0px;
+}
+</style>
